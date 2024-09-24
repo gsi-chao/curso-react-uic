@@ -1,0 +1,33 @@
+.post-metadata-container {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: flex-start;
+
+  & .post-metadata-user {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: flex-start;
+
+    & .post-metadata-verified {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: blue;
+    }
+  }
+
+  & .post-metadata-user-time {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+
+    & .post-metadata-user-time-username::after {
+      content: " •";
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+}
