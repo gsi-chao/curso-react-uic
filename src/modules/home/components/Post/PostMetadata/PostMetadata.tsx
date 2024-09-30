@@ -16,6 +16,7 @@ const PostMetadata: React.FC<Props> = ({
   username,
   verified,
 }) => {
+
   return (
     <div className="post-metadata-container">
       <div className="post-metadata-user">

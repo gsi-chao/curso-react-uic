@@ -5,4 +5,9 @@
   min-height: 450px;
   width: 100%;
   padding: 12px 16px;
+
+  & .whats-happening-title{
+    font-size: 20px;
+    font-weight: 600;
+  }
 }

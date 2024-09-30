@@ -1,10 +1,10 @@
-import RootLayout from "./layout/RootLayout";
-import HomeContainer from "./modules/home/containers/HomeContainer";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./core/router/router";
+
+
 function App() {
   return (
-    <RootLayout>
-      <HomeContainer />
-    </RootLayout>
+    <RouterProvider router={router} />
   );
 }
 
