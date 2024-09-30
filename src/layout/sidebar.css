@@ -1,0 +1,13 @@
+.sidebar-container {
+  width: 270px;
+  height: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 270px;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 1000;
+}

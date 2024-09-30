@@ -1,7 +1,11 @@
-import "./App.css";
+import RootLayout from "./layout/RootLayout";
 import HomeContainer from "./modules/home/containers/HomeContainer";
 function App() {
-  return <HomeContainer />;
+  return (
+    <RootLayout>
+      <HomeContainer />
+    </RootLayout>
+  );
 }
 
 export default App;

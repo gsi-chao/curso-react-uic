@@ -1,4 +1,58 @@
+@property --foreground-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(231, 233, 234);
+}
+
+@property --background-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(0, 0, 0);
+}
+
+@property --border-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(47, 51, 54);
+}
+
+@property --gray-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(113, 118, 123);
+}
+
+:root {
+  font-family: "Roboto", sans-serif, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  scrollbar-color: rgb(62, 65, 68) rgb(22, 24, 28);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+#root {
+  width: 100%;
+}
 
 @media (prefers-color-scheme: light) {
-  
+  .theme {
+    --foreground-color: rgb(20, 23, 26);
+    --background-color: #f5f8fa;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme {
+    --foreground-color: rgb(231, 233, 234);
+    --background-color: rgb(0, 0, 0);
+  }
 }

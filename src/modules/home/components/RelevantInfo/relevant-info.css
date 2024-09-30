@@ -1,0 +1,8 @@
+.relevant-info {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  height: 100%;
+  width: 100%;
+  gap: 12px;
+}

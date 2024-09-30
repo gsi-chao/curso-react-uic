@@ -1,0 +1,46 @@
+@property --icon-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(113, 118, 123);
+}
+
+.post-stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 0;
+  gap: 16px;
+  --comment-color: rgb(29, 155, 240);
+  --retweet-color: rgb(0, 186, 124);
+  --like-color: rgb(249, 24, 128);
+
+  & .post-stats-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--icon-color);
+    transition-duration: 0.2s;
+    transition-property: all;
+
+    svg {
+      width: 1.25em;
+      height: 1.25em;
+      stroke: var(--icon-color);
+    }
+    :hover {
+      cursor: pointer;
+    }
+  }
+  .post-stats-item-comment:hover {
+    --icon-color: var(--comment-color);
+  }
+  .post-stats-item-retweet:hover {
+    --icon-color: var(--retweet-color);
+  }
+  .post-stats-item-likes:hover {
+    --icon-color: var(--like-color);
+  }
+  .post-stats-item-stats:hover {
+    --icon-color: var(--comment-color);
+  }
+}

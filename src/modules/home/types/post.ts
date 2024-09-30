@@ -13,4 +13,5 @@ export type PostUser = {
   name: string;
   username: string;
   avatar: string;
+  verified?: boolean;
 };

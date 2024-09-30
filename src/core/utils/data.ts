@@ -15,12 +15,8 @@ export const getTimeOffsetOrDate = (date: string) => {
     return `${Math.floor(offset / 3600000)}h`;
   }
 
-  if (offset < 604800000) {
-    return `${Math.floor(offset / 86400000)}d`;
-  }
-
   const options: Intl.DateTimeFormatOptions = {
-    month: "2-digit",
+    month: "short",
     day: "2-digit",
   };
   return createdAt.toLocaleDateString(undefined, options);

@@ -9,6 +9,9 @@
     gap: 2px;
     align-items: center;
     justify-content: flex-start;
+    padding-right: 4px;
+    word-wrap: break-word;
+    font-weight: 600;
 
     & .post-metadata-verified {
       width: 16px;

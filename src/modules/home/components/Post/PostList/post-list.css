@@ -1,0 +1,9 @@
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  & > div {
+    border-bottom: 1px solid var(--border-color);
+  }
+}

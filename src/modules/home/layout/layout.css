@@ -1,0 +1,19 @@
+.main-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 32px;
+  width: 1050px;
+  height: 100%;
+}
+
+.main-layout-sidebar {
+  width: 350px;
+  height: 100%;
+}
+
+.main-layout-content {
+  border: 1px solid var(--border-color);
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

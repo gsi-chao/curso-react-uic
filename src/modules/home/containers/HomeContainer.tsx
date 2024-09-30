@@ -1,5 +1,8 @@
+import AppLoader from "@/core/components/loading/AppLoader";
 import useFetch from "../../../core/hooks/useFetch";
-import PostMetadata from "../components/Post/PostMetadata/PostMetadata";
+import PostList from "../components/Post/PostList/PostList";
+import RelevantInfo from "../components/RelevantInfo/RelevantInfo";
+import MainLayout from "../layout/MainLayout";
 import { getPosts } from "../services/post";
 import { Post } from "../types/post";
 
@@ -11,18 +14,12 @@ const HomeContainer = () => {
   }
 
   return (
-    <div>
-      <PostMetadata
-        createdAt="2024-09-23 12:00:00"
-        fullName="Carlos Chao"
-        username="@chao_cortes"
-        verified
-      />
-      {loading && <span>Loading...</span>}
-      {data.map((post, key) => (
-        <span key={`post-${key}`}>{post.content}</span>
-      ))}
-    </div>
+    <MainLayout sidebar={<RelevantInfo />}>
+      <>
+        {loading && <AppLoader />}
+        <PostList posts={data} />
+      </>
+    </MainLayout>
   );
 };
 
