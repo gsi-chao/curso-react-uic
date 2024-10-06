@@ -1,13 +1,13 @@
 .main-layout {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.5fr 350px;
   grid-gap: 32px;
   width: 1024px;
   height: 100%;
 }
 
 .main-layout-sidebar {
-  width: 350px;
+  width: 100%;
   height: 100%;
 }
 

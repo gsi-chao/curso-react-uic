@@ -3,7 +3,7 @@
   width: 100dvw;
   display: grid;
   align-items: stretch;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 3fr;
 }
 
 .layout-content {

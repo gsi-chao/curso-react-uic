@@ -1,0 +1,38 @@
+.tabs-container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tab.active {
+  color: white;
+}
+
+.tab:not(.active):hover {
+  color: #ccc;
+}
+
+.underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  width: 25%;
+  border-radius: 20px;
+  background-color: #1da1f2; /* Twitter-like blue */
+  transition: left 0.3s ease;
+}

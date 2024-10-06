@@ -22,6 +22,12 @@
   initial-value: rgb(113, 118, 123);
 }
 
+@property --primary-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(29, 161, 242);
+}
+
 :root {
   font-family: "Roboto", sans-serif, Helvetica, Arial, sans-serif;
   line-height: 1.5;
