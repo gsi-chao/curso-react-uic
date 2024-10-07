@@ -1,7 +1,7 @@
 export type Post = {
   user: PostUser;
   content: string;
-  image: string;
+  image?: string;
   likes: number;
   retweets: number;
   comments: number;
@@ -14,4 +14,9 @@ export type PostUser = {
   username: string;
   avatar: string;
   verified?: boolean;
+};
+
+export type NewPostDTO = {
+  content: string;
+  visibility: string;
 };

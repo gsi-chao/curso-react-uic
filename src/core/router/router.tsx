@@ -2,7 +2,11 @@ import RootLayout from "@/layout/RootLayout";
 import { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Loading from "../components/loading/Loading";
-import { HomeContainer, PostDetailContainer } from "./routes";
+import {
+  HomeContainer,
+  HomeZustandContainer,
+  PostDetailContainer,
+} from "./routes";
 
 export const router = createBrowserRouter([
   {
@@ -18,11 +22,13 @@ export const router = createBrowserRouter([
         element: <HomeContainer />,
       },
       {
+        path: "home-zustand",
+        element: <HomeZustandContainer />,
+      },
+      {
         path: "post/:id/:name",
         element: <PostDetailContainer />,
-        children: [
-
-        ]
+        children: [],
       },
     ],
   },

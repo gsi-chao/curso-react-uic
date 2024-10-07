@@ -11,7 +11,7 @@ export const getPosts = async (): Promise<Post[]> => {
 
 export const getMocksTwitterPost = async (): Promise<Post[]> => {
   try {
-    const resp = await fetch("http://localhost:3000/posts", {
+    const resp = await fetch("https://run.mocky.io/v3/b3527807-f0f5-4726-a931-d7b43d135daa", {
       headers: {
         Authorization: `Bearer ${
           import.meta.env.VITE_APP_TWITTER_BEARER_TOKEN

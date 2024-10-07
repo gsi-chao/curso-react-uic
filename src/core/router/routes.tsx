@@ -9,4 +9,9 @@ const PostDetailContainer = lazy(
     import("../../modules/home/modules/post/containers/PostDetailsContainer")
 );
 
-export { HomeContainer, PostDetailContainer };
+const HomeZustandContainer = lazy(
+  () => import("../../modules/home/containers/HomeZustandContainer")
+);
+
+export { HomeContainer, HomeZustandContainer, PostDetailContainer };
+

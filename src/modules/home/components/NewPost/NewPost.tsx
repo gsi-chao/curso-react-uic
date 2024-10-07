@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useFormContext } from "react-hook-form";
+import { NewPostDTO } from "../../types/post";
 import "./new-post.css"; // Import the CSS file
 
 const NewPost = () => {
-  const [post, setPost] = useState("");
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext<NewPostDTO>();
 
   return (
     <div className="new-post-container">
@@ -13,19 +17,36 @@ const NewPost = () => {
       />
       <div className="new-post-body">
         <div className="new-post-header">
-          <select className="visibility-select">
+          <select className="visibility-select" {...register("visibility")}>
             <option value="everyone">Everyone</option>
             <option value="followers">Followers</option>
             <option value="mentioned">Mentioned Only</option>
           </select>
+          {errors["visibility"] ? (
+            <span
+              style={{
+                color: "red",
+              }}
+            >
+              {errors["visibility"].message}
+            </span>
+          ) : null}
         </div>
 
         <textarea
           className="new-post-input"
           placeholder="What is happening?!"
-          value={post}
-          onChange={(e) => setPost(e.target.value)}
+          {...register("content")}
         />
+        {errors["content"] ? (
+          <span
+            style={{
+              color: "red",
+            }}
+          >
+            {errors["content"].message}
+          </span>
+        ) : null}
 
         <div className="reply-info">Everyone can reply</div>
 
@@ -38,7 +59,9 @@ const NewPost = () => {
             <i className="icon-schedule">📅</i>
             <i className="icon-location">📍</i>
           </div>
-          <button className={`post-btn ${post ? "active" : ""}`}>Post</button>
+          <button type="submit" className="post-btn active">
+            Post
+          </button>
         </div>
       </div>
     </div>
